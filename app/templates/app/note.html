@@ -20,7 +20,7 @@
                     <thead>
                         <tr>
                             <th>Note</th>
-                            <th style="width: 100px">Action</th>
+                            <th style="width: 180px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -28,6 +28,10 @@
                         <tr>
                             <td>{{ n.designation }}</td>
                             <td>
+                                <!-- Bouton Modifier ajouté ici -->
+                                <a href="{% url 'update_note' n.id %}" class="btn btn-warning btn-sm">Modifier</a>
+                                
+                                <!-- Bouton Supprimer existant -->
                                 <a href="{% url 'delete_note' n.id %}" class="btn btn-danger btn-sm">Supprimer</a>
                             </td>
                         </tr>

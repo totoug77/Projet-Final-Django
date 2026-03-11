@@ -121,3 +121,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Dis à Django d'utiliser ton URL personnalisée pour le login
+LOGIN_URL = 'login'
+
+# Tes autres redirections (vérifie qu'elles sont bien là aussi)
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
